@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="admin_admin" Codebehind="admin.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+   
+   
+   <meta name="description" content="" id="metaDesc" runat="server" />
+
+<meta name="keywords" content="" id="metaKeywords" runat="server" />
+
+     
+   
+  <link rel="stylesheet" href="../css/jquery.ui.all.css"/>
+
+<link rel="stylesheet" href="../css/demos.css"/>
+   <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.core.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.mouse.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.sortable.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$( "ul.droptrue" ).sortable({
+			connectWith: "ul"
+		});
+
+		$( "ul.dropfalse" ).sortable({
+			connectWith: "ul",
+			dropOnEmpty: false
+		});
+
+		$( "#sortable1, #sortable2, #sortable3" ).disableSelection();
+	});
+	</script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+    <form id="form1" runat="server">
+<div id="container">
+	<div id="menus">
+    	<a href="#" title="Socialite Admin Control" class="logo-txt">Zartshop.com</a>
+        <div class="welcome">
+        	<a href="#">Welcome Administrator</a>
+            <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click1">LogOut</asp:LinkButton>
+        </div>
+    </div>
+    
+    <div id="content">
+    	
+        <!-- Left Nav	-->
+        <div id="left-nav">
+        	
+            <div class="admin">
+            	<div class="admin-img"><img src="images/admin.jpg" alt="" /></div>
+                <ul class="adm">
+                	<li><b>Administrator</b></li>
+					
+                </ul>
+            </div>
+            
+            <ul class="left-links">
+            	<li><b>Ads & Banners</b></li>
+				<li><a href="ads.aspx" >Manage Ads</a></li>
+                 <li><a href="banner.aspx" >Manage Banner</a></li>      
+			
+			
+				<li><b>Settings</b></li>
+				<li><a href="change-password.aspx" >Change Password</a></li>
+				<li><a href="website-settings.aspx">Website Settings</a></li>
+						<li><a href="freeshipping.aspx">Free Shipping</a></li>
+						<%--<li><a href="shipping-tax.aspx">Shipping & Tax</a></li>--%>
+<li><a href="cms.aspx">Manage CMS</a></li>
+
+<li><a href="home-menu.aspx">Manage Home Page</a></li>
+<li><a href="payment-gateway.aspx">Manage Payment Gateway</a></li>
+
+				<li><b>Products</b></li>
+				<li><a href="category.aspx">Manage Categories</a></li>
+				
+<li><a href="brands.aspx">Manage Brands</a></li>
+<li><a href="product.aspx">Manage Product</a></li>
+<li><a href="productfilter.aspx" >Product filters</a></li>
+
+<li><b>Users</b></li>
+<li><a href="users.aspx">Manage Users</a></li>
+	<li><b>Orders</b></li>
+	<li><a href="orders.aspx">Manage Orders</a></li>
+			<li><a href="newsletter.aspx">Manage Newsletters</a></li>
+            </ul>
+            
+        </div>
+        <!-- End of left Nav	-->
+        
+          <!-- Right Nav	-->
+        <div id="right-nav">
+        
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        
+         </div>
+        <!-- End of Right Nav	-->
+        
+        
+     </div>
+    
+    <div id="footer"></div>
+    
+    
+    </form>
+</div>
+</body>
+</html>

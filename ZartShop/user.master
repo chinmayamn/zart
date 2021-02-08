@@ -1,0 +1,234 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="user" Codebehind="user.master.cs" %>
+<%@ Register  Src="~/menu.ascx" TagName="menu" TagPrefix="uc1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="description" content="" id="metaDesc" runat="server" />
+
+<meta name="keywords" content="" id="metaKeywords" runat="server" />
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+  	<!-- Content	-->
+<!--[if lt IE 7]>
+<script language="JavaScript" src="js/png.js"></script>
+<link href="css/ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!-- Show Cat	-->
+<script type="text/javascript" src="category-show/hideshow.js"></script>
+<link href="category-show/hideshow.css" rel="stylesheet" type="text/css" />
+<!-- End of Show Cat	-->
+
+<!-- Banner script	-->
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="banner/jquery.mSimpleSlidebox.css" type="text/css" />
+<script src="banner/jquery.mSimpleSlidebox.js" type="text/javascript"></script>
+<!-- End of Banner script	-->
+<script type="text/javascript" src="js/zartshop.js"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/zartshop.js"></script>
+
+<link href="scrolling/flexcrollstyles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="scrolling/flexcroll.js">
+</script><style type="text/css">.flexcroll-hide-default {overflow: hidden !important;}</style>
+<script type="text/javascript" src="scrolling/scrollscript.js"></script>
+
+<script type="text/javascript" src="js/payment-tabs.js"></script>
+ <script type="text/javascript" src="highslide-with-html.js"></script>
+<link rel="stylesheet" type="text/css" href="highslide.css" />
+<script type="text/javascript">
+hs.graphicsDir = 'graphics/';
+hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+
+</script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+<form id="form1" runat="server">
+
+<asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true">
+</asp:ScriptManager>
+<a  class="offer" href=newsletter.aspx onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )"><img src="images/offer.png" width="31" alt="" /></a>
+<div class="wrapper">
+	<div class="container">
+    
+    	<!-- Top Nav	-->
+        <div class="top-nav">
+        	
+            <a href="index.aspx" title="ZARTSHOP.COM" class="logo"><img src="images/logo.png" width="223" alt="" /></a>
+            
+            <div class="ship-nav">
+            	<ul class="shipping">
+                	<li><span><img src="images/shipping.png" alt="" /></span><b>Free shipping</b> for all purchase</li>
+					<li><span><img src="images/best.png" alt="" /></span><b>Best Price</b> Guaranted</li>
+					<li><span><img src="images/secure.png" alt="" /></span><b>Secure Payment</b> 100%</li>
+                </ul>
+                
+                <div class="search-nav">
+                    <asp:DropDownList ID="DropDownList1" runat="server" class="search-cat">
+                    </asp:DropDownList>
+                    <input type="text" value="I’m looking for...." onblur="if(this.value=='') this.value='I’m looking for....';" onfocus="if(this.value=='I’m looking for....') this.value='';" class="search" />
+                    
+                    <input type="button" value="Search" class="search-btn" />
+                </div>
+                
+            </div>
+            
+            <!-- Top right	-->
+            <div class="top-right">
+            
+				<div class="sr">
+                    <ul class="home">
+                    	<li><a href="index.aspx"><img src="images/home.png" width="20" alt="" class="hm" /> Home</a> &nbsp;</li>
+                    	<li style="padding:2px 5px;"><asp:LoginStatus ID="LoginStatus1" runat="server"  LoginText="Login" LogoutAction="Redirect"  LogoutText="Log&nbsp;Out" onloggedout="LoginStatus1_LoggedOut" onloggingout="LoginStatus1_LoggingOut" /></li>
+                    	<li><a href="#"><img src="images/facebook.png" alt="" /></a></li>
+                    	<li><a href="#"><img src="images/twit.png" alt="" /></a></li>
+                    	<li>
+                    	
+                    	</li>
+                    </ul>
+                
+                	<div class="like">
+                     <%--   <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fwebtekpages&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:75px; height:21px;" allowTransparency="true"></iframe>
+				--%>	</div>                
+                </div>
+                
+                <div class="sr">
+                	<ul class="cart-list">
+                    	  <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
+                            
+                            <li><a href="shipping-address.aspx" ><img src="images/shop.png" width="20" class="shop" alt="" />
+                    	
+                    	
+                          
+                            My Cart (<asp:Literal ID="Literal1" runat="server"></asp:Literal>)
+                                
+                          </a></li>
+                            </ContentTemplate>
+                            </asp:UpdatePanel>
+                    	         
+                              
+                    	<li><a href="my-account.aspx">My Account</a></li>
+                    	<li><a href="wishlist.aspx">My WishList</a></li>
+                    	<li><a href="my-order.aspx">Track Order</a></li>
+                    	<li><a href="cms.aspx?id=Help">Help</a></li>
+                    </ul>
+                </div>
+                <div class="welcome-user">
+                	<asp:LoginView ID="LoginView1" runat="server">
+						<AnonymousTemplate>
+							<span style=" font-weight:bold; color:#990033;">Welcome Guest</span>
+						</AnonymousTemplate>
+						<LoggedInTemplate>
+                            <asp:Literal ID="Literal2" runat="server"></asp:Literal>
+						</LoggedInTemplate>
+        			</asp:LoginView>
+            	</div>
+                <div class="call">
+                	<p class="cal">Call to Buy : 000-00-000-000</p>
+                    <p>Customer Care : 000-000 000 00</p>
+                </div>
+                
+                
+            
+            </div>
+            <!-- End of Top right	-->
+            
+        </div>
+        <!-- End of Top Nav	-->
+    
+    	
+
+     <uc1:menu ID="menu1" runat="server" />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    <!-- Footer	links	-->
+        <div class="footer-links">
+        	
+            <ul class="f-links">
+            	<li><b>Company</b></li>
+                <li><a href="cms.aspx?id=About-Us">About Us</a></li>
+				<li><a href="cms.aspx?id=Our Team">Our Team</a></li>
+				<li><a href="cms.aspx?id=Work with us">Work with us</a></li>
+				<li><a href="cms.aspx?id=Sitemap">Sitemap</a></li>
+            </ul>
+            <ul class="f-links">
+            	<li><b>TERMS &amp; POLICIES</b></li>
+                <li><a href="cms.aspx?id=Terms of Use">Terms of Use</a></li>
+				<li><a href="cms.aspx?id=Privacy Policy">Privacy Policy</a></li>
+				<li><a href="cms.aspx?id=Cancellation Policy">Cancellation Policy</a></li>
+				<li><a href="cms.aspx?id=Return Policy">Return Policy</a></li>
+				<li><a href="cms.aspx?id=Exchange Policy">Exchange Policy</a></li>
+				<li><a href="cms.aspx?id=Shipping-Packing">Shipping &amp; Packing</a></li>
+				<li><a href="cms.aspx?id=Vouchers-Discount Coupons">Vouchers &amp; Discount Coupons</a></li>
+            </ul>
+            <ul class="f-links">
+            	<li><b>WHY SHOP WITH US</b></li>
+                <li><a href="cms.aspx?id=Guaranteed Lowest Prices">Guaranteed Lowest Prices</a></li>
+				<li><a href="cms.aspx?id=Zero damage risk (Insurance)">Zero damage risk (Insurance)</a></li>
+				<li><a href="cms.aspx?id=Quality check before dispatch">Quality check before dispatch</a></li>
+				<li><a href="cms.aspx?id=Dispatch in 48 hrs">Dispatch in 48 hrs</a></li>
+				<li><a href="cms.aspx?id=Cash on Delivery option">Cash on Delivery option</a></li>
+				<li><a href="cms.aspx?id=7 day moneyback guarantee">7 day moneyback guarantee</a></li>
+				<li><a href="cms.aspx?id=Original products, no fakes">Original products, no fakes</a></li>
+				<li><a href="cms.aspx?id=All day call center">All day call center</a></li>
+            </ul>
+            <ul class="f-links">
+            	<li><b>Your Account</b></li>
+                <li><a href="my-account.aspx" >Your Account Home</a></li>
+				<li><a href="my-order.aspx">Where's My Order</a></li>
+				<li><a href="shipping-address.aspx">Shopping Cart</a></li>
+				<li><a href="wishlist.aspx">Wish List</a></li>
+            </ul>
+            <ul class="f-links">
+            	<li><b>Payment Options</b></li>
+                <li><a href="#">Credit / Debit Cards</a></li>
+				<li><a href="#">PayPal</a></li>
+				<li><a href="#">Net Banking</a></li>
+				<li><a href="#">Cash On Delivery</a></li>
+				<li><a href="#">EMI New</a></li>
+                <li><img src="images/card.png" alt="" class="card" /></li>
+                <li><img src="images/secured.jpg" alt="" /></li>
+            </ul>
+            <ul class="f-links">
+
+            	<li><b>Contact Us</b></li>
+                <li><a href="contact-us.aspx">Contact Us</a></li>
+				<li><a href="cms.aspx?id=Bulk Order Inquiry">Bulk Order Inquiry</a></li>
+				<li><a href="cms.aspx?id=Corporate Program">Corporate Program</a></li>
+				<li><a href="#">Merchant Signup / Login</a></li>
+				<li><a href="cms.aspx?id=Advertise With Us">Advertise With Us</a></li>
+				<li><a href="cms.aspx?id=Affiliate New">Affiliate New</a></li>
+            </ul>
+        
+        </div>
+        <!-- End of Footer	links	-->
+        
+        <!-- Footer	-->
+        <div class="footer">
+        	<p class="copy">&copy; 2012 Copyrights Reserved</p>
+            <p class="xlent">Powered by <a href="http://www.xlentfacilities.com">Xlent Facilities.com</a></p>
+        <div class="clear"></div>
+        <div class="clear"></div>
+        <div class="clear"></div>
+        <div class="clear"></div>
+        <div class="clear"></div>
+        <div class="clear"></div>
+        <div class="clear"></div>
+        </div>
+        <!-- ENd of Foter	-->
+    
+    </div>
+</div></form>
+</body>
+</html>

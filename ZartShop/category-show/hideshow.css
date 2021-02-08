@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+
+.dhtmlgoodies_question{	/* Styling question */
+	/* Start layout CSS */
+	color:#FFF;
+	width:230px;
+	margin-bottom:2px;
+	margin-top:2px; padding:5px 0; font:bold 13px Arial, Helvetica, sans-serif;
+	border-top:#a450ca solid 1px;
+	
+	/* End layout CSS */
+	
+	overflow:hidden;
+	cursor:pointer;
+}
+.dhtmlgoodies_answer{	/* Parent box of slide down content */
+	/* Start layout CSS */
+	width:230px;
+	float:left;
+	/* End layout CSS */
+	
+	visibility:hidden;
+	height:0px;
+	overflow:hidden;
+	position:relative;
+
+}
+.dhtmlgoodies_answer_content{	/* Content that is slided down */
+	padding:1px;
+	font-size:0.9em;	
+	position:relative; padding-bottom:20px; float:left;
+}
+

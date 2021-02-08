@@ -1,0 +1,192 @@
+﻿/*Page related styles for you to view*/
+#test1, #test2, #test3 {
+overflow: auto;
+ float:left ;
+padding: 0; height:150px;
+outline: none; width:185px;
+}
+
+
+
+
+/* general page style ends here */
+
+/* Scroll Bar Master Styling Starts Here */
+
+.scrollgeneric
+{
+line-height: 1px;
+font-size: 1px;
+position: absolute;
+}
+
+.vscrollerbase, .vscrollerbar {
+width: 15px;
+top: 0px;
+}
+
+.vscrollerbar {
+left: 0px;
+}
+
+.hscrollerbase, .hscrollerbar {
+height: 15px;
+left: 0px;
+
+}
+
+
+.hscrollerbar {
+top: 0px;
+}
+
+.vscrollerbar, .hscrollerbar {
+/*padding information of these elements are only used for
+padding of the scroll-bar with respect to the scroll base,
+the padding will automatically be turned off by the script*/
+padding: 5px;
+/* z-index for scrollbars no longer has to be given as of version
+1.7.5 for correct operation, but it is still recommended, as this
+decides the z-index for content.*/
+z-index: 2;
+}
+
+.vscrollerbarbeg {
+/*top image holder for vertical scroll bar*/
+background: url(vscroller.png) 0px -10px;
+width: 15px;
+height: auto;
+top: 0px;
+}
+
+.vscrollerbarend {
+/*bottom image holder for vertical scroll bar*/
+background: url(vscroller.png);
+width: 15px;
+height: 10px;
+}
+
+.hscrollerbarbeg {
+background: url(/web/images/hscroller.png) -10px 0px;
+height: 15px;
+width: auto;
+left: 0;
+}
+
+.hscrollerbarend {
+background: url(/web/images/hscroller.png);
+height: 15px;
+width: 10px;
+}
+
+/* Following are OPTIONAL */
+
+.vscrollerbase, .hscrollerbase {
+background-image: url(/web/images/scrollbaseback.png);
+
+}
+
+.hscrollerbasebeg {
+left: 0px;
+top: 0px;
+height: 15px;
+background: url(/web/images/scrollbases.png) -22px 0px no-repeat;
+}
+
+.hscrollerbaseend {
+top: 0px;
+height: 15px;
+width: 7px;
+background: url(/web/images/scrollbases.png) 0% 0% no-repeat;
+}
+
+.vscrollerbasebeg {
+top: 0px;
+width: 15px;
+background: url(/web/images/scrollbases.png) -7px -8px no-repeat;
+}
+
+.vscrollerbaseend {
+height: 7px;
+width: 15px;
+background: url(/web/images/scrollbases.png) -7px 0px no-repeat;
+}
+
+.scrollerjogbox {
+width: 15px;
+height: 15px;
+bottom: 0px;
+right: 0px;
+background: url(/web/images/scrolljog.png) 50% 50%;
+}
+
+
+/* Scroll Bar Master Styling Ends Here */
+
+/* Extra sample styles */
+#test2 .vscrollerbarbeg {
+background: url(vscroller2.png) no-repeat center -9px;
+width: 18px;
+height: auto;
+}
+
+#test2 .vscrollerbarend {
+background: url(vscroller2.png) no-repeat center top;
+width: 18px;
+height: 9px;
+}
+
+#test2 .vscrollerbase {
+width: 18px;
+background:url(scrollbg.jpg) repeat-y center top;
+}
+
+#test2 .vscrollerbar {
+padding: 0px;
+}
+
+#test2 .vscrollerbasebeg, #test2 .vscrollerbaseend {
+background-image: none;
+}
+
+#test3 .hscrollerbarbeg {
+background: url(/web/images/hscroller3.png) -9px 0px;
+height: 9px;
+}
+
+#test3 .hscrollerbarend {
+/*bottom image holder for vertical scroll bar*/
+background: url(/web/images/hscroller3.png);
+height: 9px;
+width: 9px;
+}
+
+#test3 .hscrollerbase {
+height: 9px;
+background: white none;
+}
+
+#test3 .hscrollerbasebeg, #test3 .hscrollerbaseend {
+border: 3px solid #63615A;
+height: 5px;
+background-image: none;
+background-color: #EEE;
+top: 2px;
+}
+
+#test3 .hscrollerbaseend{
+border-width: 0;
+background-color: #63615A;
+height: 5px;
+width: 12px;
+}
+
+#test3 .hscrollerbasebeg{
+border-width: 0px 0px 0px 5px;
+}
+
+#test3 .hscrollerbar {
+padding: 3px;
+}
+
+

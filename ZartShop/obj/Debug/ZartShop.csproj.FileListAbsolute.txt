@@ -1,0 +1,2 @@
+D:\Chinmaya\zartshop\ZartShop\ZartShop\obj\Debug\ZartShop.csprojResolveAssemblyReference.cache
+D:\Chinmaya\zartshop\ZartShop\ZartShop\obj\Debug\ZartShop.csproj.CoreCompileInputs.cache

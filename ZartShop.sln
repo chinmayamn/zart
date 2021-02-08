@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZartShop", "ZartShop\ZartShop.csproj", "{4A30C6EA-BD88-4CF4-8A0E-C425FDFD103A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZartDAL", "..\ZartDAL\ZartDAL.csproj", "{ED1424A6-AA2E-4625-BD07-74C309E0BE4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A30C6EA-BD88-4CF4-8A0E-C425FDFD103A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A30C6EA-BD88-4CF4-8A0E-C425FDFD103A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A30C6EA-BD88-4CF4-8A0E-C425FDFD103A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A30C6EA-BD88-4CF4-8A0E-C425FDFD103A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED1424A6-AA2E-4625-BD07-74C309E0BE4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED1424A6-AA2E-4625-BD07-74C309E0BE4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED1424A6-AA2E-4625-BD07-74C309E0BE4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED1424A6-AA2E-4625-BD07-74C309E0BE4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
